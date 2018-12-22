@@ -4,7 +4,7 @@ import numpy
 
 import matplotlib.pyplot as plt
 
-
+#Hi mom
 
 def frange(start,stop,step):
 
