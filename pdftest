@@ -1,0 +1,16 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[pdftex]{graphicx}
+\title{Ph20 Set3 mk1}
+\author{Albert Nazeeri}
+\date{December 2018}
+
+\begin{document}
+
+\maketitle
+
+\begingroup
+\obeylines
+\input{testtext.txt}%
+\endgroup%
+\end{document}
