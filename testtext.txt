@@ -1,0 +1,113 @@
+\section{Part I}
+
+Problem 1: The program was written. See figures 1 and 2 for x and v as functions of time respectively.\\
+Problem 2: See figures 3 and 4 for the analytically solved versions of figures 1 and 2. See figures 5 and 6 for the global errors in position and velocity of the numerical solutions.\\
+Problem 3: Figure 7 shows the linearity of truncation error with the size of h.\\
+Problem 4: Figure 8 shows how the numerically calculated energy diverges ~linearly. As the global error in velocity and position from the analytical solution had a growing upper bound, it is expected that the energy must not remain constant and rather grow forever.\\
+Problem 5: Via algebraic manipulation we find that:
+\begin{center}
+    $x_{i+1}=\frac{x_i+h*v_i}{1+h^2}$\\
+    $v_{i+1}=\frac{v_{i+1}-h*x_i}{1+h^2}$\\
+\end{center}
+Figures 9 and 10 show the implicit solution for position and velocity. Figures 11 and 12 show show the error in both position and velocity- these graphs look similar to what we saw for the explicit solution. Figure 13 shows how the truncation error varies with h. While the relationship is still linear, there is a little less truncation error per h for the implicit method vs the explict method (especially as $h\rightarrow \infty$). Figure 14 shows how the energy varies with time. Unlike the explicit method where the energy grew unbounded to infinity, the implicit energy appears to converge to zero.
+Problem 6: I continued to read.
+
+\begin{figure}[ht]
+\includegraphics[width=4in]{"ph20_set3_1a1_mk1".png}
+\caption{Position vs time for 30 units of time ($X_{initial}=1, V_{initial}=0, h=0.01, N=3000$).}
+\end{figure}
+
+\begin{figure}[ht]
+\includegraphics[width=4in]{"ph20_set3_1a2_mk1".png}
+\caption{Velocity vs time for 30 units of time ($X_{initial}=1, V_{initial}=0, h=0.01, N=3000$).}
+\end{figure}
+
+\begin{figure}[ht]
+\includegraphics[width=4in]{"ph20_set3_2a1".png}
+\caption{Analytically solved position vs time for 30 units of time.}
+\end{figure}
+
+\begin{figure}[ht]
+\includegraphics[width=4in]{"ph20_set3_2a2".png}
+\caption{Analytically solved velocity vs time for 30 units of time.}
+\end{figure}
+
+\begin{figure}[ht]
+\includegraphics[width=4in]{"ph20_set3_2a3".png}
+\caption{Global error in position for numerical solution ($X_{initial}=1, V_{initial}=0, h=0.01, N=3000$) for 30 units of time.}
+\end{figure}
+
+\begin{figure}[ht]
+\includegraphics[width=4in]{"ph20_set3_2a4".png}
+\caption{Global error in velocity for numerical solution ($X_{initial}=1, V_{initial}=0, h=0.01, N=3000$) for 30 units of time.}
+\end{figure}
+
+\begin{figure}[ht]
+\includegraphics[width=4in]{"ph20_set3_3a1".png}
+\caption{Truncation error vs h. Integration was done up to 1 unit of time. ($X_{initial}=1, V_{initial}=0)$}
+\end{figure}
+
+\begin{figure}[ht]
+\includegraphics[width=4in]{"ph20_set3_4a1".png}
+\caption{Numerically calculated energy vs time for 30 units of time ($X_{initial}=1, V_{initial}=0, h=0.01, N=3000$).}
+\end{figure}
+
+\begin{figure}[ht]
+\includegraphics[width=4in]{"ph20_set3_5a1".png}
+\caption{Implicitly derived position vs time for 30 units of time ($X_{initial}=1, V_{initial}=0, h=0.01, N=3000$).}
+\end{figure}
+
+\begin{figure}[ht]
+\includegraphics[width=4in]{"ph20_set3_5a2".png}
+\caption{Implicitly derived velocity vs time for 30 units of time ($X_{initial}=1, V_{initial}=0, h=0.01, N=3000$).}
+\end{figure}
+
+\begin{figure}[ht]
+\includegraphics[width=4in]{"ph20_set3_5a3".png}
+\caption{Global error in implicitly derived position ($X_{initial}=1, V_{initial}=0, h=0.01, N=3000$) for 30 units of time.}
+\end{figure}
+
+\begin{figure}[ht]
+\includegraphics[width=4in]{"ph20_set3_5a4".png}
+\caption{Global error in implicitly derived velocity ($X_{initial}=1, V_{initial}=0, h=0.01, N=3000$) for 30 units of time.}
+\end{figure}
+
+\begin{figure}[ht]
+\includegraphics[width=4in]{"ph20_set3_5a5".png}
+\caption{Implicit truncation error vs h. Integration was done up to 1 unit of time. ($X_{initial}=1, V_{initial}=0)$}
+\end{figure}
+
+\begin{figure}[ht]
+\includegraphics[width=4in]{"ph20_set3_5a6".png}
+\caption{Implicitly calculated energy vs time for 30 units of time ($X_{initial}=1, V_{initial}=0, h=0.01, N=3000$).}
+\end{figure}
+
+\section{Part II}
+Problem 1: As seen in figures 15 and 16 the explicit and implicit Euler methods do not conserve volume in phase space. The phase space path in the explicit method spirals outwards and the implicit method inwards. The analytic solution (seen in figure 17) is a perfect circle.\\\\
+Problem 2: Figure 18 shows the symplectic method plotted in phase space. The result looks very nearly like figure 17. Unlike the explicit/implicit Euler method our result doesn't appear to spiral out/in.\\\\
+Problem 3: Figure 19 shows how the symplectic energy changes with time. The energy oscillates with small amplitude around the physically correct value of 1. These small, bounded deviations are somewhat expected as figures 17 and 18 look qualitatively quite similar.
+
+\begin{figure}[ht]
+\includegraphics[width=4in]{"ph20_set3_2_1a1".png}
+\caption{Explicit position vs time in phase space for 30 time units ($X_{initial}=1, V_{initial}=0, h=0.1, N=300$).}
+\end{figure}
+
+\begin{figure}[ht]
+\includegraphics[width=4in]{"ph20_set3_2_1a2".png}
+\caption{Implicit position vs time in phase space for 30 time units ($X_{initial}=1, V_{initial}=0, h=0.1, N=300$).}
+\end{figure}
+
+\begin{figure}[ht]
+\includegraphics[width=4in]{"ph20_set3_2_1a3".png}
+\caption{Analytic position vs time in phase space for 30 time units ($X_{initial}=1, V_{initial}=0, h=0.1, N=300$).}
+\end{figure}
+
+\begin{figure}[ht]
+\includegraphics[width=4in]{"ph20_set3_2_2a1".png}
+\caption{Symplectic position vs time in phase space for 30 time units ($X_{initial}=1, V_{initial}=0, h=0.1, N=300$).}
+\end{figure}
+
+\begin{figure}[ht]
+\includegraphics[width=4in]{"ph20_set3_2_3a1".png}
+\caption{Symplectic energy vs time for 30 time units ($X_{initial}=1, V_{initial}=0, h=0.1, N=300$).}
+\end{figure}
